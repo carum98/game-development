@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  height: 100vh;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  transform: scale(2);
+}
+
+#canvas {
+  background-color: #fff;
+  image-rendering: pixelated;
+}
+
+h1 {
+  color: #fff;
+}
