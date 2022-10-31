@@ -26,12 +26,14 @@ const CONTROLS = {
 export class Controls {
   constructor() {
     this.keys = []
+    this.direction = undefined
 
     document.addEventListener('keydown', ({ code }) => {
       const direction = CONTROLS[code]
 
       if (Object.keys(CONTROLS).includes(code) && !this.keys.includes(direction)) {
         this.keys.unshift(direction)
+        this.direction = direction
       }
     })
 
@@ -44,7 +46,7 @@ export class Controls {
     })
   }
 
-  get direction() {
-    return this.keys[0]
-  }
+  // get direction() {
+  //   return this.keys[0]
+  // }
 }

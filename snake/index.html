@@ -7,8 +7,58 @@
     <link rel="stylesheet" href="index.css">
   </head>
   <body>
-    <h1>Score: <span>00</span></h1>
+    <header>
+      <h1>Score: <span>00</span></h1>
+
+      <button>Pause</button>
+    </header>
+
     <canvas id="canvas"></canvas>
+
+    <dialog id="menu">
+      <form>
+        <label>Snake Color</label>
+        <input name="snake_color" type="color" value="#00FF99" />
+        
+        <label>Food Color</label>
+        <input name="food_color" type="color" value="#FF0000" />
+
+        <label>Cell count</label>
+        <div id="cell_count">
+          <input name="cell_count" type="range" min="5" max="40" value="15" />
+          <span></span>
+        </div>
+
+        <label>Speed</label>
+        <div id="speed">
+          <input name="speed" type="range" min="5" max="20" value="5" />
+          <span></span>
+        </div>
+
+        <label>Collision with walls</label>
+        <div>
+          <input type="radio" id="collition_yes" name="collition" value="1" checked>
+          <label for="collition_yes">Yes</label>
+          <input type="radio" id="collition_no" name="collition" value="0">
+          <label for="collition_no">No</label>
+        </div>
+
+        <button autofocus type="submit">
+          Start
+        </button>
+      </form>
+    </dialog>
+
+    <dialog id="pause">
+      <button id="resume">Resume</button>
+      <button id="reset">Reset</button>
+    </dialog>
+
+    <dialog id="gameover">
+      <h1>Game Over</h1>
+      <h3>Score: <span>0</span></h3>
+      <button>Retry</button>
+    </dialog>
 
     <script type="module" src="index.js"></script>
   </body>
