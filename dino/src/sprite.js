@@ -1,7 +1,7 @@
 export class Sprite {
   constructor() {
     this.img = new Image()
-    this.img.src = '../assets/sprite.png'
+    this.img.src = './assets/sprite.png'
   }
 
   dino() {
