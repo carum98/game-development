@@ -1,0 +1,13 @@
+/* @font-face {
+	font-family:"Invaders";
+	src: url("./assets/fonts/space_invaders.woff");
+} */
+
+body {
+	background-color: black;
+}
+
+canvas {
+	display: block;
+	margin: 0 auto;
+}
